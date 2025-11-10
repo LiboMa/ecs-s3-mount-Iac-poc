@@ -8,7 +8,7 @@ bucket_name = "ecs-s3-test-bucket"
 
 # VPC Configuration
 vpc_cidr                 = "10.109.0.0/16"
-availability_zones_count = 2
+availability_zones_count = 3
 public_subnet_cidrs      = ["10.109.1.0/24", "10.109.2.0/24", "10.109.3.0/24"]
 enable_dns_hostnames     = true
 enable_dns_support       = true
@@ -29,7 +29,7 @@ asg_max_size         = 3
 asg_desired_capacity = 1
 
 # ECS Task Configuration
-task_cpu    = "1024"  # 0.25 vCPU
+task_cpu    = "2048"  # 0.25 vCPU
 task_memory = "8192"  # 512 MB
 # CPU/Memory combinations for EC2 launch type:
 # - 256 CPU / 512-2048 MB
@@ -45,8 +45,8 @@ log_retention_days = 7
 # Options: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653
 
 # Additional Tags (Optional)
-additional_tags = {
-  Owner       = "DevOps Team"
-  CostCenter  = "Engineering"
-  Compliance  = "None"
-}
+#additional_tags = {
+#  Owner       = "DevOps Team"
+#  CostCenter  = "Engineering"
+#  Compliance  = "None"
+#}
