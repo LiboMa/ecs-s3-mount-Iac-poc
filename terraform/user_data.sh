@@ -49,8 +49,8 @@ fi
 echo "s3://${bucket_name} /mnt/s3-bucket mount-s3 _netdev,nosuid,nodev,rw,allow-other,nofail 0 0" >> /etc/fstab
 
 # Restart ECS agent to pick up new configuration
-echo "Restarting ECS agent..."
-systemctl restart ecs
+# echo "Restarting ECS agent..."
+# systemctl restart ecs
 
 # Wait for ECS agent to start
 sleep 1
